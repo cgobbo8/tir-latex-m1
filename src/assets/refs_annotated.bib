@@ -1,0 +1,522 @@
+
+@article{hughes_why_1989,
+	title = {Why {Functional} {Programming} {Matters}},
+	volume = {32},
+	issn = {0010-4620},
+	url = {https://doi.org/10.1093/comjnl/32.2.98},
+	doi = {10.1093/comjnl/32.2.98},
+	abstract = {As software becomes more and more complex, it is more and more important to structure it well. Well-structured software is easy to write, easy to debug, and provides a collection of modules that can be re-used to reduce future programming costs. Conventional languages place conceptual limits on the way problems can be modularised. Functional languages push those limits back. In this paper we show that two features of functional languages in particular, higher-order functions and lazy evaluation, can contribute greatly to modularity. As examples, we manipulate lists and trees, program several numerical algorithms, and implement the alpha-beta heuristics (an Artificial Intelligence algorithm used in game-playing programs). Since modularity is the key to successful programming, functional languages are vitally important to the real world.},
+	number = {2},
+	urldate = {2021-02-17},
+	journal = {The Computer Journal},
+	author = {Hughes, J.},
+	month = jan,
+	year = {1989},
+	keywords = {c'est quoi, pourquoi, Ana},
+	pages = {98--107},
+	note = { \\
+	Cet article met en évidence l'importance et les avantages de la programmation fonctionnelle, dans un monde où les logiciels deviennent de plus en plus complexes. Les deux exemples décrits dans l'article sont : les fonctions d'ordre supérieur et l'évaluation paresseuse. Le langage fonctionnel utilisé dans cet article est Miranda. \\
+    Cet article a attiré mon attention grâce à la comparaison entre la programmation fonctionnelle et la programmation structurée, qui prouve que la conception modulaire présente un grand avantage. Les petits modules peuvent être codés facilement, testés indépendamment, et réutilisés par la suite, ce qui rend le développement d'une application plus rapide, et facilite la correction des bugs. Un autre argument important, c'est que les fonctions d'ordre supérieur permettent de définir simplement beaucoup d'opérations et manipuler les types de données. De même, l'évaluation paresseuse optimise l'implémentation des programmes fonctionnels. Parmi les avantages de cet article, il est important de mentionner la multitude d’exemples fournis, rendant cet article plus compréhensible. Un exemple d'algorithme heuristique implémenté à l'aide des fonctions d'ordre supérieur et de l'évaluation paresseuse est décrit dans la section 5. Ainsi, en utilisant ces 2 propriétés de la programmation fonctionnelle, nous pouvons produire du code très puissant en très peu de lignes.
+    }}
+
+@inproceedings{wadler_essence_1992,
+	address = {New York, NY, USA},
+	series = {{POPL} '92},
+	title = {The essence of functional programming},
+	isbn = {978-0-89791-453-6},
+	url = {https://doi.org/10.1145/143165.143169},
+	doi = {10.1145/143165.143169},
+	abstract = {This paper explores the use monads to structure functional programs. No prior knowledge of monads or category theory is required. Monads increase the ease with which programs may be modified. They can mimic the effect of impure features such as exceptions, state, and continuations; and also provide effects not easily achieved with such features. The types of a program reflect which effects occur. The first section is an extended example of the use of monads. A simple interpreter is modified to support various extra features: error messages, state, output, and non-deterministic choice. The second section describes the relation between monads and the continuation-passing style. The third section sketches how monads are used in a compiler for Haskell that is written in Haskell.},
+	urldate = {2021-02-17},
+	booktitle = {Proceedings of the 19th {ACM} {SIGPLAN}-{SIGACT} symposium on {Principles} of programming languages},
+	publisher = {Association for Computing Machinery},
+	author = {Wadler, Philip},
+	month = feb,
+	year = {1992},
+	keywords = {c'est quoi, comment, Ana, Haskell},
+	pages = {1--14},
+	note = { \\ Cet article explique ce que sont les monades, à quoi ça sert, comment elles peuvent être utilisées dans la programmation fonctionnelle et comment elles sont interprétées par le compilateur. Les exemples fournis dans cet article sont écrits en Haskell. \\
+
+    Dans la première section de l’article, il est mentionné que l’utilisation des monades peut rendre un programme facilement modifiable autant pour les langages purs qu’impurs. Les monades sont des structures utilisées dans les langages fonctionnels qui peuvent être redéfinis en faisant juste quelques changements locaux. Elles sont utilisées pour l’encapsulation des objets existants dans des objets plus complexes, portant plus d’informations. Les monades sont aussi utilisées pour la gestion des entrées/sorties et pour le contrôle d’exécution dans les programmes purement fonctionnels. Les monades offrent une construction permettant d’enrichir les capacités des fonctions surtout dans les langages purs. \\
+
+    Cet article est intéressant grâce à ses aspects très pédagogiques concernant la programmation fonctionnelle surtout pour les débutants en expliquant en détails tous les aspects d’utilisation des monades. Malheureusement, tous les exemples sont fournis dans un langage pur – Haskell et il manque des exemples d’utilisation des monades dans les langages impurs. \\
+
+
+    }
+}
+
+@article{peyton_jones_parallel_1989,
+	title = {Parallel {Implementations} of {Functional} {Programming} {Languages}},
+	volume = {32},
+	issn = {0010-4620},
+	url = {https://doi.org/10.1093/comjnl/32.2.175},
+	doi = {10.1093/comjnl/32.2.175},
+	abstract = {One of the most attractive features of functional programming languages is their suitability for programming parallel computers. This paper is devoted to discussion of such a claim. Firstly, parallel functional programming is discussed from the programmer's point of view. Secondly, since most parallel functional language implementations are based on the concept of graph reduction, the issues raised by graph reduction are discussed. Finally, the paper concludes with a case study of a particular parallel graph reduction machine and a survey of other parallel architectures.},
+	number = {2},
+	urldate = {2021-02-17},
+	journal = {The Computer Journal},
+	author = {Peyton Jones, S. L.},
+	month = jan,
+	year = {1989},
+	keywords = {Mohamed},
+	pages = {175--186},
+	note={Cet article de 1988 détaille les hypothèses qui soutiennent la forte compatibilité de paradigme fonctionnel avec la programmation parallèle. Peyton Jones explique d’abord pourquoi cette compatibilité, en comparant le développement impérative et fonctionnel des programmes parallèles, il cite que l’avantage du fonctionnel est surtout dans l’aspect de la dépendance des données au sein du paradigme qui permet l’évaluation concurrente de plusieurs parties d’une expression, aussi le fait qu’on a pas besoin de rajouter du langage pour exprimer la concurrence car c’est implicite dans le langage fonctionnel, il s’attaque ensuite aux enjeux critique de la parallélisation qui sont l’allocation des ressources et l’ordonnancement, en indiquant qu’on peut mieux gérer ces aspects avec le paradigme fonctionnel, cette démonstration se basent sur le modèle de réduction de graphe pour la génération et contrôle du parallélisme.
+
+Je trouve que cet article est interessant pour son langage directe et droit au but, et que les explications sont sous forme de questions réponses, je trouve aussi très bien de sem mettre dans le point de vue de programmeur pendant l’aspect comparatif entre la programmation fonctionnel et impérative, ça permet de mieux mettre en avant les avantages des idées de Peyton Jones. Enfin j'apprécie le fait de donner une étude de cas des concepts vu dans les chapitres précédents à la fin de l’article, ça permet de voir les aspects de la gestion des ressources et de l’allocation qui sont un peu difficiles dans un cas concret.
+}
+}
+
+@article{barendregt_impact_1997,
+    title = {The impact of the lambda calculus in logic and computer science},
+	abstract = {One o f the most im portant contributions o f A. Church to logic is his invention o f the lam bda calculus. We present the genesis o f this theory and its two m ajor areas o f application: the representation o f computations and the resulting functional programming languages on the one hand and the representation o f reasoning and the resulting systems o f computer mathematics on the other hand.},
+	language = {en},
+	author = {Barendregt, Henk},
+	year = {1997},
+	keywords = {Mohamed},
+	pages = {36},
+	note={Dans cet Article de 1997, Henk Barendregt commence par une présentation de lambda calcul tel que Church l’a inventé d’une façon formelle en retirant la partie des opérations logique jugée inconsistante et gardant seulement la partie fonctionnelle. Ensuite, il enchaîne sur une discussion sur la notion de lambda définissabilité introduite par Church pour capturer la notion de calculabilité des fonctions dans le lambda calcul. Dans la troisième section, il commence à parler des lambda calculi, qui sont des prototypes de langage de programmation avec des versions typées et non-typées, avec une section juste pour parler de la représentation des types de données dans le lambda calculi comme par exemple la représentation par des termes lambda des arbres.\\
+
+Il parle aussi de la naissance de la programmation fonctionnelle et les classes des langages fonctionnels “eager” à évaluation gloutonne avec des exemples de LISP, ” lazy” à évaluation paresseuse avec SASL, “typed” typé avec ML, “untyped” non-typés avec SASL et LISP. Il finit son article en parlant de la  recherche continue d’une façon de combiner la représentation logique et la représentation fonctionnelle dans un système formel adéquat.\\
+
+J’ai moins apprécié l'intégration directe de beaucoup de note de bas de page qui figurent seulement à la fin de l'article dans les phrases de l’article, et il ne donne pas des bouts de code dans les langages qu’il a cité comme exemple pour illustrer les concepts.\\
+}
+}
+
+@article{hinsen_promises_2009,
+	title = {The {Promises} of {Functional} {Programming}},
+	volume = {11},
+	issn = {1521-9615},
+	url = {http://ieeexplore.ieee.org/document/5076325/},
+	doi = {10.1109/MCSE.2009.129},
+	language = {en},
+	number = {4},
+	urldate = {2021-02-18},
+	journal = {Comput. Sci. Eng.},
+	author = {Hinsen, Konrad},
+	month = jul,
+	year = {2009},
+	keywords = {Ana},
+	pages = {86--90},
+	note = { \\ L’article “The promises of functional programming” présente les avantages de la programmation fonctionnelle par rapport à la programmation impérative, orienté objet ou bien la programmation structurée. L’article propose une explication fondamentale de fonctionnement des programmes fonctionnels en passant par la récursivité, les abstractions fonctionnelles, le parallélisme et les promesses. Le langage fonctionnel utilisé dans cet article est Clojure – un dialecte contemporain et optimisé de langage LISP. \\
+
+    Il est d’abord présenté un module d’apprentissage des principes fondamentaux de la programmation fonctionnelle : les fonctions mathématiques, le remplacement des boucles à l’aide de la programmation récursive, les effets de bord. La seconde étape présente les abstractions algorithmiques dans la programmation fonctionnelle avec un exemple des fonctions d’ordre supérieur. Il est pratique de remarquer que l’auteur font une classification des langages fonctionnels. Les 2 grandes familles évoquées dans cet article sont la famille des langages LISP dont font partie Scheme, SASL, Clojure, etc. et la famille des langages ML dont font partie OCaml, F#, Haskell. De même, l’auteurs nous présentent les avantages de la programmation parallèle, la rapidité à laquelle un tel programme peut être compilé et exécuté. \\
+
+    Les avantages de la programmation fonctionnelle présentés dans l’article sont clairs et argumentés par des exemples concrets ce qui rend l’article compréhensible même pour les débutants. 
+
+	}
+}
+
+@article{harrison_comparing_1996,
+	title = {Comparing programming paradigms: an evaluation of functional and object-oriented programs},
+	volume = {11},
+	issn = {02686961},
+	shorttitle = {Comparing programming paradigms},
+	url = {https://digital-library.theiet.org/content/journals/10.1049/sej.1996.0030},
+	doi = {10.1049/sej.1996.0030},
+	language = {en},
+	number = {4},
+	urldate = {2021-02-18},
+	journal = {Softw. Eng. J. UK},
+	author = {Harrison, R. and Samaraweera, L.G. and Dobie, M.R. and Lewis, P.H.},
+	year = {1996},
+	keywords = {Corentin},
+	pages = {247},
+	note= {
+
+	\paragraph{}Le but de cet article est de montrer si la qualité du code créé avec un langage fonctionnel est significativement différente de la qualité de code créé grâce à un langage orienté objet.
+
+ \paragraph{}Pour cela 12 algorithmes ont été développés en SML et en C++ par un développeur connaissant parfaitement ces deux langages et ayant la même expérience sur les deux. Les algorithmes sont acceptés après avoir passé des assertions et des tests rigoureux.
+
+ \paragraph{}Les chercheurs précisent qu’il est très difficile de comparer des langages de programmation car de nombreux paramètres et variables peuvent entrer en compte.
+
+\paragraph{}Les algorithmes développés concernent tous l’analyse d’image car ce domaine propose une large palette de complexité et de difficulté. De plus, réduire le domaine d’application fait également en sorte de réduire le nombre de variables pouvant altérer les résultats.
+
+\paragraph{}Pour comparer les langages, les chercheurs utilisent la classification de Fenton[1], et une approche interne(mesuré par rapport à la production, le process et les ressources) et externe (en considérant les relations avec l’environnement). Leur intérêt principal se base sur l’approche externe( testing, maintainability, testability…).
+
+\paragraph{}Bien que sur les benchmarks et dans tous les tableaux comparatifs le C++ semble mieux s’en sortir, la conclusion de l’étude et qu’il n’y a pas de différence significative sauf pour la durée des tests et le nombre d’erreurs connus. 
+
+\paragraph{}J’ai bien aimé le fait que malgré le fait qu’ils aient trouvé des différences dans les benchmarks, ils tempèrent les résultats et essaient de les expliquer par d’autres facteurs que la simple différence des langages utilisés. Comme par exemple le fait que s'il y a plus d’erreurs par lignes de code avec SML c’est en partie car grâce à son approche fonctionnelle il y a plus de fonctionnalités concentrées dans moins de code que pour le C++. J’ai également apprécié qu’il y ait l’avis du développeur en question, bien que ce ne soit pas une analyse scientifique, ça permet de donner un feedback intéressant je trouve.
+
+\paragraph{}Néanmoins je regrette le fait que l’étude n'ait pas été faite à plus grande échelle, avec plus de langages et plus de domaines d’applications que juste l’analyse d’image.  
+
+\paragraph{}Finalement la conclusion de l’article était un peu téléphonée, les seuls critères objectifs ne suffisent pas à décider quel paradigme il faut utiliser, il s’agit plus d’une affaire subjective et de goût.
+
+\paragraph{}[1] - FENTON, N.E.: 'Software metrics, a rigorous approach' (Chapman & Hall, London, UK, 1991)
+
+}
+}
+
+@article{hudak_conception_1989,
+	title = {Conception, evolution, and application of functional programming languages},
+	volume = {21},
+	issn = {0360-0300, 1557-7341},
+	url = {https://dl.acm.org/doi/10.1145/72551.72554},
+	doi = {10.1145/72551.72554},
+	language = {en},
+	number = {3},
+	urldate = {2021-02-18},
+	journal = {ACM Comput. Surv.},
+	author = {Hudak, Paul},
+	month = sep,
+	year = {1989},
+	keywords = {Mohamed},
+	pages = {359--411},
+	note={Dans cet Article de 1989 Paul Hudak, parle de tout les aspects de paradigme fonctionnel de la conception à ses différentes applications en passant par les étapes d'évolution des langages fonctionnels. Il introduit d’abord les fonctionnalités principales des langages fonctionnels moderne( fonctions d’ordre supérieur, transparence référentiel, évaluation paresseuse, abstraction des données, et le pattern matching ) avec une distinction entre les langages déclaratif et impératif et une discussion de comment le paradigme fonctionnel sert à éviter les effets de bord dans les programmes. Ensuite, il détaille l'évolution des langages fonctionnels en spécifiant pour chaque langages sa valeur ajoutée par rapport à son précédent, il revient après pour expliquer en détail les fonctionnalités des langages fonctionnels introduites au départ avec plus de formalisme et d’exemples qui illustre ces concepts. Il continue sur les avancées de la recherche dans le domaine de programmation fonctionnelle à l’époque tel que la gestion des entrées sorties, le cache et la mémorisation, et d’autre domaine d’application tel que la programmation parallèle.\\
+
+Je trouve cet article particulièrement intéressant d’abord parce qu’il détaille un point que les autres articles n’ont pas précisé, et c’est que le lambda calcul n’est pas un langage de programmation fonctionnelle ni le premier langage fonctionnel mais c’est plutôt sa consistance en tant qu’un système mathématique, et aussi sa nature de typage libre qui a participé comme une base pour le développement des langages fonctionnels. Ensuite, parce que trouve que c’est une bibliographie complète sur les langages fonctionnels à l’époque et permet d’avoir une vision détaillée de l’avancement de paradigme fonctionnel de l’époque. Enfin, il termine par une présentation singulière sur des idées prétentieux liée à la programmation fonctionnelle.\\
+
+}
+}
+
+@inproceedings{hudak_history_2007,
+	address = {San Diego California},
+	title = {A history of {Haskell}: being lazy with class},
+	isbn = {978-1-59593-766-7},
+	shorttitle = {A history of {Haskell}},
+	url = {https://dl.acm.org/doi/10.1145/1238844.1238856},
+	doi = {10.1145/1238844.1238856},
+	abstract = {This paper describes the history of Haskell, including its genesis and principles, technical contributions, implementations and tools, and applications and impact.},
+	note = {L’article se veut plus comme une rétrospective du langage que comme une description technique. Haskell étant sorti il y a 17 ans au moment de la publication et étant un des langages les plus influents dans la programmation fonctionnelle, ce document semble donc très pertinent et intéressant, nous permettant de voir si tous ces travaux ont su trouver leur utilité au fil du temps ou n’est resté qu’une curiosité académique.
+    
+    On notera tout d’abord que les quatres auteurs ont été des acteurs majeurs dans la réalisation du langage ce qui constitue à la fois un avantage et un inconvénient, les auteurs maîtrisent leur sujets mais on peut s’attendre à ce qu’ils soient moins critique envers le langage Haskell, de par leur position.
+
+L’article est très intéressant car on apprend que le Haskell est pionnier dans l’évaluation paresseuse qui consiste à évaluer les paramètres d’une fonction non pas quand ils sont appelés mais uniquement quand les résultats des paramètres sont réellement nécessaires.
+Il l’a aussi été dans le typage des classes et a offert de par son fonctionnel pur, un langage sûr et interopérable, qui sont quelque chose de standard dans les langages modernes.
+
+La conclusion est pour moi très pertinente puisqu'elle montre que Haskell a été un pari payant pour le futur car même si on pouvait se moquer de la lenteur et de la consommation de mémoire du langage il y a 30 ans, ses concepts sont devenu des standards aujourd’hui dans les langages de programmation moderne.
+    },
+	language = {en},
+	urldate = {2021-02-18},
+	booktitle = {Proceedings of the third {ACM} {SIGPLAN} conference on {History} of programming languages},
+	publisher = {ACM},
+	author = {Hudak, Paul and Hughes, John and Peyton Jones, Simon and Wadler, Philip},
+	month = jun,
+	year = {2007},
+	keywords = {Axel},
+}
+
+
+
+@inproceedings{archipoff_promesses_2020,
+	address = {Gruissan, France},
+	title = {Des promesses, des actions, par flots, en {OCaml}},
+	url = {https://hal.archives-ouvertes.fr/hal-02389651},
+	abstract = {Nous nous intéressons aux traitements de flux audio synchrones et aux contrôles de ces traitements par des flux de commandes asynchrones : un exemple archétypal de problème de programmation globalement asynchrone et localement synchrone (GALS). Pour faire cela, un modèle qui s'impose tout à la fois par son efficacité et son élégance se situe à la croisée de plusieurs concepts clés de la programmation fonctionnelle : les actions monadiques, les promesses, et les flots récursifs d'actions ou de promesses. Suite à une expérimentation de cette modélisation en Haskell, l'objet de cet article est d'en faire une expérimentation en OCaml. De façon quelque peu inattendue, les deux approches se complètent et nous conduisent finalement à une axiomatisation originale de la notion de promesse. De plus, étendu aux flots récursifs d'actions, il apparaît que les promesses de flots d'actions peuvent être vue comme des flots de promesses. Une mise en oeuvre de ces concepts est proposée en s'appuyant sur les extensions d'OCaml par threads Posix ou par threads légers (lwt).},
+	urldate = {2021-02-18},
+	booktitle = {{JFLA} 2020 - 31ème {Journées} {Francophones} des {Langages} {Applicatifs}},
+	author = {Archipoff, Simon and Janin, David and Serpette, Bernard P.},
+	editor = {Dargaye, Zaynah and Regis-Gianas, Yann},
+	month = jan,
+	year = {2020},
+	keywords = {Corentin},
+	note = {
+
+	\paragraph{}Cette étude s’intéresse aux traitements de flux audio synchrones et aux contrôles de ces traitements par des flux de commandes asynchrones.
+
+\paragraph{}En Haskell, qui est un langage de programmation paresseux, il n’y a pas d’effets de bords et la programmation par monade est omniprésente. Alors qu’en Ocaml, qui est un langage strict avec effet de bords, la programmation par monades est rare bien que la plup	art des instructions s'exécutent dans une monade IO implicite. Le but des auteurs est donc de proposer une instanciation particulière qui explicite et mime la monade IO d’Haskell. Ce qui permet de pouvoir mieux gérer les flux de façon synchrone et asynchrone.
+
+\paragraph{}Cet article est très technique, mais tout de même bien expliqué avec beaucoup d’exemples, de plus ils s’appuient beaucoup sur des travaux qui ont déjà été publié, ce qui donne de la valeur aux propos d’après moi.
+
+\paragraph{}Cette étude ressemble à un tutoriel, il explique comment gérer les problématiques de synchronisation, de désynchronisation, d’interblocage à l’aide de monades, de flots monadiques et de promesses.
+
+\paragraph{}La programmation concurrente asynchrone a pour avantage, par rapport à la programmation concurrente généralisée, d'interdire par construction tout programme avec interblocages. L’étude permet ainsi d’identifier une première série de primitives asynchrones qui offrent, tout à la fois, la souplesse de la concurrence et l’assurance de programmes sans interblocages.
+
+\paragraph{}Les auteurs aimeraient aller plus loin en faisant en sorte de pouvoir typer les actions monadiques directement comme étant bloquante ou non bloquante.
+}
+}
+
+@phdthesis{claret_program_2018,
+	type = {Theses},
+	title = {Program in {Coq}},
+	url = {https://hal.inria.fr/tel-01890983},
+	urldate = {2021-02-18},
+	school = {Université Sorbonne Paris Cité},
+	author = {Claret, Guillaume},
+	month = sep,
+	year = {2018},
+	note = {
+	\\
+	Ce document est une thèse plutôt récente de 2018 sur les programmes en Coq, qui est à la fois un langage de programmation fonctionnel, mais aussi un assistant de preuves.
+
+Le document est très intéressant car les assistants de preuves s’inscrivent dans la suite logique de la programmation fonctionnelle, à savoir la fiabilité des programmes puisqu’ils permettent de prouver leur bon fonctionnement.
+
+Même si le langage n’est pas récent, la thèse elle l’est et peut être à la fois une excellente introduction  mais aussi un guide au Coq car en plus de présenter en détail le langage, ses spécificités et ce qu’il permet de faire, celui-ci propose des approches pour simplifier la programmation en coq, non seulement en fonctionnel, mais aussi dans d’autres paradigmes plus classiques comme l’impératif.
+
+Un autre intérêt de la thèse est qu’elle présente des concepts plus généraux aux assistants de preuves, comme la preuve par réflexion, cette partie peut être donc très intéressante à étudier même en dehors du contexte du coq si l’on souhaite travailler sur les assistants de preuve de façon plus générale
+    },
+	keywords = {Coq, Effets de bord, Axel},
+}
+
+@inproceedings{sobolev_functional_2020,
+	address = {Singapore},
+	series = {Smart {Innovation}, {Systems} and {Technologies}},
+	title = {Functional {Programming} {Patterns} in {JavaScript}},
+	isbn = {9789811383113},
+	doi = {10.1007/978-981-13-8311-3_26},
+	abstract = {Today, JavaScript (JS) is a mainstream programming language. A number of Web apps written in it have grown tremendously over the last years. Almost every Web app has JS in it since modern Web browsers support it natively, and nothing else. Modern JS apps are getting bigger and more complex. To write these apps in the traditional imperative style is becoming more and more difficult. Functional programming approach brings many advantages for large-scale development. We will have a look at what those advantages might be, and which FP patterns and techniques could be especially useful for JS development.},
+	language = {en},
+	booktitle = {Intelligent {Decision} {Technologies} 2019},
+	publisher = {Springer},
+	author = {Sobolev, Alexander and Zykov, Sergey},
+	editor = {Czarnowski, Ireneusz and Howlett, Robert J. and Jain, Lakhmi C.},
+	year = {2020},
+	keywords = {JavaScript, Functional programming, React, Corentin},
+	pages = {299--312},
+	note= {
+
+	\paragraph{}L’étude soulève le fait que le Javascript est utilisé partout sur le Web maintenant, la programmation impérative atteint ses limites pour des projets à grande échelle. Alors que, selon eux, l'approche fonctionnelle apporte de nombreux avantages dans ce domaine.
+
+Ils évoquent ensuite pourquoi la programmation fonctionnelle est une bonne alternative:
+\begin{itemize}
+             \item Les données ne sont pas mutable
+             \item Les fonctions sont pures, pas d’effets de bord
+             \item La programmation fonctionnelle et beaucoup plus courte que l’impérative (de 50\% à 90\% de réduction en moyenne)
+             \item Les fonctions sont des briques élémentaires qui permettent donc de créer des systèmes beaucoup plus complexes et plus flexibles
+        \end{itemize}
+\vspace{0.5cm}
+
+Ensuite ils montrent les similitudes du Javascript avec la programmation fonctionnelle[1]:
+\begin{itemize}
+             \item Les fonctions sont des objets comme les autres et peuvent facilement être curryfiées.
+             \item Les expressions lambdas et les arrow function.
+             \item Les closures qui permettent aussi la curryfication.
+        \end{itemize}
+
+
+
+\paragraph{}Après ce constat les chercheurs montrent dans l’articles des exemples de manipulation de liste, de compositions de fonctions en impératif et en fonctionnel pour montrer les capacités du fonctionnel et son élégance en javascript. Ils montrent également les bienfaits qu’apportent les callbacks.
+
+\paragraph{}Finalement après avoir expliqué les compositions de fonctions en javascript, qui adoptent d’ailleurs le même système qu’Haskell, ils parlent du célèbre framework Javascript qui se sert de ces patterns de compositions pour créer un système de composants.  En effet React utilise des HOC (higher-order component) qui est un pattern qui permet d’imbriquer des composants, sachant que les composants sont juste des fonctions, cela signifie que React se rapproche effectivement du fonctionnel grâce à la composition de fonctions.
+
+\paragraph{}Enfin, l’équipe conclu sur le fait que les patterns de programmation fonctionnels en Javascript aident énormément, ils permettent de réduire significativement le nombre de ligne de code, de réduire le nombre potentiel de bugs, rendre la logique plus claire, ajouter de la flexibilité, et enfin comme nous l’avons vu avec React, de pouvoir créer des applications à grande échelle avec une logique complexe.
+
+\paragraph{}Pratiquant souvent le javascript, cet article m’a beaucoup plu car je me suis reconnu dans certaines des problématiques posées et aussi certains des exemples montrés. Je savais que la programmation fonctionnelle en javascript était possible mais je ne pensais pas autant. J’ai donc beaucoup appris grâce à cette étude.
+
+\paragraph{} [1] - Douglas Crockford wrote, “Deep down, JavaScript has more in common with Lisp and Scheme than with Java. It is Lisp in C’s clothing. This makes JavaScript a remarkably powerful language.”}
+}
+
+@article{hu_how_2015,
+	title = {How functional programming mattered},
+	volume = {2},
+	issn = {2095-5138},
+	url = {https://doi.org/10.1093/nsr/nwv042},
+	doi = {10.1093/nsr/nwv042},
+	abstract = {In 1989 when functional programming was still considered a niche topic, Hughes wrote a visionary paper arguing convincingly ‘why functional programming matters’. More than two decades have passed. Has functional programming really mattered? Our answer is a resounding ‘Yes!’. Functional programming is now at the forefront of a new generation of programming technologies, and enjoying increasing popularity and influence. In this paper, we review the impact of functional programming, focusing on how it has changed the way we may construct programs, the way we may verify programs, and fundamentally the way we may think about programs.},
+	number = {3},
+	urldate = {2021-02-18},
+	journal = {National Science Review},
+	author = {Hu, Zhenjiang and Hughes, John and Wang, Meng},
+	month = sep,
+	year = {2015},
+	keywords = {comment, Ana},
+	pages = {349--370},
+	note = { \\ Cet article a été créé en tant que suite de l’article « Why functional programming matters », 25 ans plus tard pour mettre en évidence l’évolution de la programmation fonctionnelle, et de son importance pour la nouvelle génération des techniques de programmation. \\
+
+    L’article « Why functional programming matters » est devenu en peu de temps populaire. Ainsi, les plus populaires langages de programmation comme C#, C++, Java ont intégré la possibilité d’utilisation des expressions lambda ainsi que des fonctions d’ordre supérieur. L’évaluation paresseuse prend de plus en plus de d’importance. De même, il y a de plus en plus de nouveaux langages fonctionnels comme Haskell et Erlang adoptés dans l’industrie de la programmation. Ils sont utilisés pour la conception des applications les plus connues dans le monde entier comme Facebook, WhatsApp, LinkedIn, etc. Nous trouvons cet article très conséquent, car il offre une vision globale sur la programmation fonctionnelle de la dernière génération, en expliquant les aspects les plus importants dans la programmation fonctionnelle. Les effets de bord et la correction des programmes fonctionnels, le raisonnement algébrique, le typage, les monades, les algorithmes parallèles et distribués. \\
+
+    L’article montre comment la programmation fonctionnelle a changé l’enseignement dans les facultés d’informatique, ainsi que son utilisation massive par les plus grandes entreprises d’informatique. \\
+
+
+	}
+}
+
+@inproceedings{armand_extending_2010,
+	address = {Berlin, Heidelberg},
+	series = {Lecture {Notes} in {Computer} {Science}},
+	title = {Extending {Coq} with {Imperative} {Features} and {Its} {Application} to {SAT} {Verification}},
+	isbn = {978-3-642-14052-5},
+	doi = {10.1007/978-3-642-14052-5_8},
+	abstract = {Coq has within its logic a programming language that can be used to replace many deduction steps into a single computation, this is the so-called reflection. In this paper, we present two extensions of the evaluation mechanism that preserve its correctness and make it possible to deal with cpu-intensive tasks such as proof checking of SAT traces.},
+	language = {en},
+	booktitle = {Interactive {Theorem} {Proving}},
+	publisher = {Springer},
+	author = {Armand, Michaël and Grégoire, Benjamin and Spiwack, Arnaud and Théry, Laurent},
+	editor = {Kaufmann, Matt and Paulson, Lawrence C.},
+	year = {2010},
+	keywords = {Abstract Machine, Imperative Feature, Machine Representation, Reduction Rule, Virtual Machine, Corentin},
+	pages = {83--98},
+	note= {
+	\vspace{0.5cm}
+	Coq est un langage qui permet de faire des preuves. Coq étant basé sur l’isomorphisme Curry-Howard, écrire une preuve ou un programme est quasiment la même chose. C’est la méthodologie de la preuve par réflexion qui a permis par exemple de résoudre formellement le célèbre problème des 4 couleurs. La preuve par réflexion est donc beaucoup utilisée mais quand elle est poussée dans ses retranchements il y a des problèmes d’efficacité. 
+\vspace{0.5cm}
+Pour expliquer ce problème, les chercheurs de cette étude pointent du doigt le manque de structures de données primitives tels que les arrays et les integer, le fait de ne pas pouvoir déstructrurer les structures de données et également un grand manque d’efficience.
+\vspace{0.5cm}
+D’après les chercheurs, les integers étant actuellement des types inductifs en Coq, il n’est pas possible d’utiliser les capacités arithmétiques du processeur pour gagner en efficacité.
+\vspace{0.5cm}
+Le défi de l’équipe est donc de modifier Coq pour y incorporer ces types primitifs (les integers, les arrays), d'ajouter des fonctions primitives.
+\vspace{0.5cm}
+Après avoir montré comment ils s’y sont pris pour modifier le langage, ils testent leur nouvelle version de Coq sur des problèmes tel que le Rubik's Cube et montrent qu’il est solvable en 11 coups en 4 minutes, ou encore le problème SAT bien connu grâce au problème du millénaire P = NP ? .
+\vspace{0.5cm}
+D’après les chercheurs, actuellement en coq, les integers sont des types inductifs, sauf qu’ils veulent utiliser les capacités arithmétiques du processeurs en étendant Coq avec des integers natif, des fonctions mathématiques primitives.
+\vspace{0.5cm}
+Le but de ces changements n’étaient pas de faire entrer Coq en compétition avec des langages plus mainstreams, mais juste de faire en sorte que le solveur garde ses caractéristiques de solveur tout en lui donnant un boost, la résolution du Rubik's Cube en 4 minutes étant par exemple suffisante pour l’équipe de recherche.
+\vspace{0.5cm}
+L’article est intéressant car il montre comment résoudre une problématique en adaptant nos outils. Mais en changeant Coq pour le rapprocher de l’impératif, on peut se demander où se trouve la frontière entre le solveur et le langage multi paradigme.
+}
+}
+
+@inproceedings{cardelli_compiling_1984,
+	address = {Austin, Texas, United States},
+	title = {Compiling a functional language},
+	isbn = {978-0-89791-142-9},
+	url = {http://portal.acm.org/citation.cfm?doid=800055.802037},
+	doi = {10.1145/800055.802037},
+	language = {en},
+	urldate = {2021-02-28},
+	booktitle = {Proceedings of the 1984 {ACM} {Symposium} on {LISP} and functional programming  - {LFP} '84},
+	publisher = {ACM Press},
+	author = {Cardelli, Luca},
+	year = {1984},
+	keywords = {Axel},
+	pages = {208--217},
+	note = {Cet article parle des travaux de l’auteur sur la construction d’un compilateur en ML, qui est un langage de programmation fonctionnel, ancêtre de nombreux langages fonctionnels purs, mais aussi de langages multi-paradigmes implémentant le fonctionnel, certains très populaires comme Coq, Scala, OCaml ou C++.
+
+L’article date de 1995, à cette époque le fonctionnel était quelque chose de beaucoup plus exotique que maintenant, des langages qui sont des références dans le milieu aujourd’hui comme Scala, Haskell ou OCaml n’existaient pas ou à peine.
+
+Bien qu’il soit vieux, l’article reste très intéressant car en rentrant dans les détails de comment il a implémenté les spécificités propres au langages comme le pattern matching, la représentation des type-utilisateurs et la vérification des types, il explique en détails le fonctionnement de celles-ci qui sont toujours standard et d’actualité dans les langages modernes.
+
+Toutes ces fonctionnalités sont maintenant le standard des langages fonctionnels, cet article permet donc en l’étudiant d’avoir un vue solide sur ce qu’est un langage fonctionnel et comment l’implémenter et peut être très intéressant à coupler avec un document sur un langage fonctionnel plus moderne pour voir quelles ont été les axes d’évolutions et donc les autres possibilités d’évolution que l’on propose.
+}
+}
+
+@inproceedings{garrigue_relaxing_2002,
+	title = {Relaxing the {Value} {Restriction}},
+	booktitle = {The {Third} {Asian} {Workshop} on {Programming} {Languages} and {Systems}, {APLAS}'02, {Shanghai} {Jiao} {Tong} {University}, {Shanghai}, {China}, {November} 29 - {December} 1, 2002, {Proceedings}},
+	author = {Garrigue, Jacques},
+	year = {2002},
+	keywords = {Corentin},
+	pages = {31--45},
+	note = {
+
+\paragraph{}L’article s'intéresse au problème de typer les applications partielles polymorphes en présence des fonctionnalités impératives de ocaml
+
+\paragraph{}Ce problème pouvait être résolu par la value restriction, mais cette value restriction comporte certaines limitations, l’article propose donc un moyen de pallier à ces défauts.
+
+\paragraph{}Le problème est causé par des fonctionnalités impératives de OCaml. Si j’ai bien compris, Jacques Garrigue a introduit un nouveau constructeur de type nommé zero, qui est gardé vide, ce qui fait qu’il est nécessairement plus général que le type qu’il remplace.
+
+\paragraph{}Malgré beaucoup d’exemples, j’avoue ne pas avoir trop compris le reste de l’article, et comment ils s’y sont exactement pris, ma connaissance du fonctionnel et de OCaml étant trop limitée, je pense, pour cet article.
+
+\paragraph{}Cela dit, grâce à l’introduction de ce zero dans une position de covariant. Le chercheur a été capable d’atténuer les effets indésirables de la value restriction, tout en gardant ses avantages. Ce changement a même été ajouté dans la Objective Caml 3.07 compiler.
+
+}
+}
+
+@article{greiner_weak_1996,
+	title = {Weak polymorphism can be sound},
+	volume = {6},
+	issn = {1469-7653, 0956-7968},
+	NOTurl = {https://www.cambridge.org/core/journals/journal-of-functional-programming/article/abs/weak-polymorphism-can-be-sound/4FA7CFD20FDD996954155E84846AC1A5},
+	doi = {10.1017/S0956796800001593},
+	abstract = {The weak polymorphic type system of Standard ML of New Jersey (SML/NJ) (MacQueen, 1992) has only been presented as part of the implementation of the SML/NJ compiler, not as a formal type system. As a result, it is not well understood. And while numerous versions of the implementation have been shown unsound, the concept has not been proved sound or unsound. We present an explanation of weak polymorphism and show that a formalization of this is sound. We also relate this to the SML/NJ implementation of weak polymorphism through a series of type systems that incorporate elements of the SML/NJ type inference algorithm.},
+	language = {en},
+	number = {1},
+	urldate = {2021-03-03},
+	journal = {Journal of Functional Programming},
+	author = {Greiner, John},
+	month = jan,
+	year = {1996},
+	note = {	Dans Cet article de 1996 John Greiner parle des types polymorphes dans le langage Standard ML dans sa version New Jersey, en introduisant une preuve formelle de la solution de polymorphisme faible à travers plusieurs exemple pour pouvoir à la fois s'adresser aux programmeurs qui cherchent à comprendre le polymorphisme faible, et les concepteurs des systèmes de types.
+Il critique d’abord le système de type de Milner créée en 1978, qui permet à une cellule de référence dans le langage SML, d’avoir deux types de références différents ce qui est inconsistent,  ensuite il explique le polymorphisme faible en se basant sur l’approximation de Tofte en 1988 et sa distinction entre les types des variables applicative et impérative, et en ajoutant un système de puissance aux types de variable qui donne un aspect critique ( la variable doit être généralisé) ou non-critique ( la variable peut ne pas être généralisée).
+Enfin il introduit une preuve formelle d’un langage SML-Like qu’il appelle lambda-sigma, pour prouver la consistence de polymorphisme faible.\\
+
+Ce qui est intéressant dans cet article, c’est le fait de donner une preuve formelle à un concept existant, aussi le fait que Greiner explique les études sur lesquelles il a basé son travail et aussi le concept qu’il veut formaliser avant d’introduire sa valeur ajouté. Je trouve aussi que les exemples données pour expliquer non seulement le polymorphisme faible, mais aussi son système de puissance, simples et très bien choisi, ce qui aide le lecteur à bien assimiler le concept. J’aime bien aussi la section 6 qui revient sur SML/NJ après avoir introduit lambda-sigma pour donner une relation entre les deux au niveau syntaxique et sémantique.\\
+},
+	keywords = {Mohamed},
+	pages = {111--141},
+}
+
+@incollection{hutchison_history_2013,
+	address = {Berlin, Heidelberg},
+	title = {Some {History} of {Functional} {Programming} {Languages}},
+	volume = {7829},
+	isbn = {978-3-642-40446-7 978-3-642-40447-4},
+	url = {http://link.springer.com/10.1007/978-3-642-40447-4_1},
+	abstract = {We study a series of milestones leading to the emergence of lazy, higher order, polymorphically typed, purely functional programming languages. An invited lecture given at TFP12, St Andrews University, 12 June 2012.},
+	language = {en},
+	urldate = {2021-03-03},
+	booktitle = {Trends in {Functional} {Programming}},
+	publisher = {Springer Berlin Heidelberg},
+	author = {Turner, D. A.},
+	editor = {Hutchison, David and Kanade, Takeo and Kittler, Josef and Kleinberg, Jon M. and Mattern, Friedemann and Mitchell, John C. and Naor, Moni and Nierstrasz, Oscar and Pandu Rangan, C. and Steffen, Bernhard and Sudan, Madhu and Terzopoulos, Demetri and Tygar, Doug and Vardi, Moshe Y. and Weikum, Gerhard and Loidl, Hans-Wolfgang and Peña, Ricardo},
+	year = {2013},
+	doi = {10.1007/978-3-642-40447-4_1},
+	keywords = {Ana},
+	pages = {1--20},
+	note = { \\
+	Cet article relève les étapes de développement des langages fonctionnels. Le focus porte sur le développement des langages de programmation qui ont intégré l’évaluation paresseuse, les fonctions d’ordre supérieur, le polymorphisme typé et les fonctions dites pures. \\
+
+    L’article commence par une explication des lambda calculs qui est une notion fondamentale dans les programmes fonctionnels. Le premier langage fonctionnel est LISP. LISP est un langage de traitement des listes avec une syntaxe parenthésée des S-expressions qui n’est pas très lisible et compréhensible. Actuellement toutes les versions de LISP sont basées sur des lambda calculs. Parmi les langages décrits dans l’article sont : Algol 60, ISWIM (If you see what I mean), PAL, Miranda et Haskell.  Mais celui qui m’a attiré l’attention c’est SASL – un langage fonctionnel développé par D. Turner pour l’enseignement d’un module de la programmation fonctionnelle. C’est un langage avec une syntaxe simple permettant de manipuler des entiers, caractères, listes et fonctions, qui est devenu vite populaire parmi les étudiants. Ce langage a servi de base pour le développement du langage Miranda qui par la suite a influencé le développement du langage Haskell. \\
+
+    Cet article nous a permis d’avoir une vision plus globale sur la programmation fonctionnelle car l’auteur met en évidence l’évolution de la programmation fonctionnelle par l’intermédiaire des langages fonctionnels qui ont beaucoup changé entre-temps. \\
+
+	}}
+
+@inproceedings{thivierge_efficient_2012,
+	address = {Copenhagen, Denmark},
+	title = {Efficient compilation of tail calls and continuations to {JavaScript}},
+	isbn = {978-1-4503-1895-2},
+	url = {http://dl.acm.org/citation.cfm?doid=2661103.2661108},
+	doi = {10.1145/2661103.2661108},
+	abstract = {This paper describes an approach for compiling Scheme’s tail calls and ﬁrst-class continuations to JavaScript, a dynamic language without those features. Our approach is based on the use of a simple custom virtual machine intermediate representation that is translated to JavaScript. We compare this approach, which is used by the Gambit-JS compiler, to the Replay-C algorithm, used by Scheme2JS (a derivative of Bigloo), and CPS conversion, used by Spock (a derivative of Chicken). We analyse the performance of the three systems with a set of benchmark programs on three popular JavaScript VMs (V8, Ja¨gerMonkey and Nitro). On the benchmark programs, all systems perform best when executed with V8 and our approach is consistently faster than the others on all VMs. For some VMs and benchmarks our approach is moderately faster than the others (below a factor of 2), but in some cases there is a very large performance gap (with Nitro there is a slowdown of up to 3 orders of magnitude for Scheme2JS, and up to 2 orders of magnitude for Spock).},
+	language = {en},
+	urldate = {2021-03-03},
+	booktitle = {Proceedings of the 2012 {Annual} {Workshop} on {Scheme} and {Functional} {Programming} - {Scheme} '12},
+	publisher = {ACM Press},
+	author = {Thivierge, Eric and Feeley, Marc},
+	year = {2012},
+	keywords = {Axel},
+	note = {
+Cet article parle de comment compiler la récursivité terminale et la continuation du langage Scheme en JavaScript de façon efficace, chose que ne peut faire le langage de façon native.
+
+Ce document est pour moi très intéressant car il propose d’implémenter des méthodes fonctionnelles de Scheme, qui est un dérivé de Lisp, donc une langage fonctionnel pur, à JavaScript, qui est déjà très populaire en 2012 mais est devenu en 2021 avec des plateformes comme node, indispensable. Non seulement pour du web front-end, mais aussi pour du back-end et du logiciel.
+
+Les benchmark à la fin montrent de très bon résultats, notamment sur le moteur V8 qui est maintenant en 2021 utilisé sur la quasi totalité des navigateurs mais aussi sur toutes les autres implémentations hors navigateurs du moteur comme nodeJS pour le backend ou MongoDB pour la base de donnée.
+
+Couplé avec la popularité croissante de la programmation fonctionnelle, ce document est pour moi très intéressant à étudier, que ce soit pour développer de façon fonctionnelle en JavaScript avec des performances satisfaisantes mais aussi le fait  qu'il permette d'enrichir un langage récent avec la syntaxe et les fonctionnalités d'un langage qui, bien qu'il soit plus ancien, offre de nouvelles fonctionnalités, faisant du "neuf avec du vieux".
+},
+	pages = {47--57},
+}
+
+@article{ng_survey_1995,
+	title = {A survey of languages integrating functional, object-oriented and logic programming},
+	volume = {41},
+	issn = {01656074},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/0165607494000175},
+	doi = {10.1016/0165-6074(94)00017-5},
+	abstract = {Functional, object-oriented and logic programming are widely regarded as the three most dominant programming paradigms nowadays. For the past decade, many attempts have been made to integrate these three paradigms into a single language. This paper is a survey of some of this new breed of multiparadigm languages. First we give a succinct introduction to the three paradigms. Then we discuss a variety of approaches to the integration of the three paradigms through an overview of 24 multiparadigm languages. All possible combinations of the three paradigms, namely logic + object-oriented, functional + logic, functional + object-oriented, and object-oriented + logic + functional, are considered separately. For the purpose of classification, we have proposed a design space of programming languages called the FOOL-space.},
+	note = {Cet article a pour objectif de comparer entre eux les langages multi-paradigmes, se basant sur trois paradigmes différents:  le fonctionnel, l’objet et la programmation logique.
+
+Un des défauts majeurs de l’article selon moi est la comparaison avec la programmation logique qui n’est pas très pertinente : la programmation fonctionnelle est un sous-ensemble de la programmation logique et il aurait été beaucoup plus pertinent d’utiliser le paradigme de la programmation impérative qui est le paradigme le plus populaire.
+
+Plusieurs concepts sont intéressants, comme le fait de représenter sur un graphique en courbe deux paradigmes différents et de classer les langages selon des critères bien définis afin de savoir s' ils tendent plus vers un paradigme que l’autre, ce qui permet de bien voir les spécificités propres à chacun.
+
+Malgré tout l’article, datant de 1995, souffre de son âge, l’impératif n’est représenté que par le paradigme objet et les langages comparés sont tous des langages peu utilisés et/ou obsolètes.},
+	language = {en},
+	number = {1},
+	urldate = {2021-03-03},
+	journal = {Microprocessing and Microprogramming},
+	author = {Ng, K.W. and Luk, C.K.},
+	month = apr,
+	year = {1995},
+	keywords = {Axel},
+	pages = {5--36},
+}
+
+@article{priestley_ai_2017,
+	title = {{AI} and the {Origins} of the {Functional} {Programming} {Language} {Style}},
+	volume = {27},
+	issn = {0924-6495, 1572-8641},
+	url = {http://link.springer.com/10.1007/s11023-017-9432-7},
+	doi = {10.1007/s11023-017-9432-7},
+	language = {en},
+	number = {3},
+	urldate = {2021-02-18},
+	journal = {Minds \& Machines},
+	author = {Priestley, Mark},
+	month = sep,
+	year = {2017},
+	keywords = {Mohamed},
+	pages = {449--472},
+	note={Dans cet Article de 2017 on se met dans un contexte historique qui raconte le lien entre les langages des programmations, leur classifications par rapport à leur domaines d’application, allant de la différence entre les styles de programmation et les langages de programmation, à l’introduction de terme “paradigme” par Floyd, passant par les classifications de Sammet des langages par leur domaines d’applications et ensuite par style (choix individuel de programmeur). Dans cette discussion ressort la nécessité de développer un nouveau style de langage pour programmer les processus d’informations complexes tel que introduit par Newell et Simon en 1956, et faire la liaison avec l’intelligence artificielle qui est considérée comme une ensemble de processus d’informations complexes.  LL “ langage logique” en pseudo-code est ainsi né.
+\\}
+}
